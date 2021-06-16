@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous" ></script>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <p class="title">
+    Coding Quiz
+    </p>
+    <br>
+    
+    <section class="center">
+    <div id="container" class="justify-center center container"> 
+ 
+        <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="">
+             <button id="btn" class="btn" data-number="1" onclick="checkAnswer"></button>
+            <button id="btn" class="btn" data-number="2" onclick="checkAnswer"></button>
+            <button id="btn" class="btn" data-number="3" data-number="1" onclick="checkAnswer"></button>
+            <button id="btn" class="btn" data-number="4" onclick= "checkAnswer"></button> 
+        </div>
+
+        </div>
+        <div id="controls">
+        <button id="Start" class="btn" >Start</button>
+        <!-- <button id="next" class="next-btn btn hide" >Next</button> -->
+        </div>
+         <!-- <div id="container" class="hide">
+             <h2><span class="win">0</span></h2>
+         </div> -->
+    </div>
+
+    <div class="card timer hide" id="time">
+        <div class="timer-text">
+            <div class="large-font timer-count text-center">60</div>
+            <h4>Seconds remaining</h4>
+            <h4>Score: <span class="score">0</span> </h4>
+        </div>
+    </div>
+
+    <div class="submit-form flex-column hide" id="container">
+
+        <div>
+            <h3 class="top">Enter highscore</h3>
+        </div>
+        <div class="row">
+            <form class="col" id="score-form">
+                <label>Initials:</label>
+                <input id="name-input" type="text" placeholder="Enter initials here">
+                <input id="submit" type="submit" value="submit">
+            </form>
+
+        </div>
+    </div>
+
+    <div class="hide" id="highScores">
+    <div class="highscore-container" id="container">
+        <div class="highscore">
+            <ul id="score-list"> </ul>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+<footer><P>This quiz was created on the stolen land of the Boon Wurrung people of the Kulin Nation, who's sovereignty has not been seeded</P></footer>
+<script src="./script.js" defer></script>
+<script src="./scoreSave.js" defer></script>
+</html>
