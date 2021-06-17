@@ -258,7 +258,7 @@ const questions = [
     {
         question:'What is the <link> tag used for in HTML?',
         answer: [
-            {text: "Yes", correct: false},
+            {text: "Links in other websites", correct: false},
             {text: "Linking to an external style sheet", correct: true},
             {text: "Linking to an external Javascript file", correct: false},
             {text: "Nothing", correct: false}
@@ -266,14 +266,64 @@ const questions = [
     },
 
     {
-        question: 'What is the signifigance of the location fo the MCG?',
+        question: '_____ is the process of finding errors and fixing them?',
         answer: [
-            {text: "there is none", correct: false},
-            {text: "Meeting place for the Kulin nation to decide new laws", correct: true},
-            {text: "Where sports games were held", correct: false},
-            {text: "Was a woman's area", correct: false}
+            {text: "Scanning", correct: false},
+            {text: "Compliling", correct: false},
+            {text: "Debugging", correct: true},
+            {text: "Cleaning", correct: false}
         ]
-    }
+    },
+
+    {
+        question: 'Why was github created?',
+        answer: [
+            {text: "The only way to safely share CSS", correct: false},
+            {text: "The only way to build databases", correct: false},
+            {text: "The only way to safely share html", correct: false},
+            {text: "The only way to safely share javascript", correct: true}
+        ]
+    },
+
+    {
+        question: 'HTML can be described as _____',
+        answer: [
+            {text: "the skeleton of a website", correct: true},
+            {text: "the muscle of a website", correct: false},
+            {text: "the fat of a website", correct: false},
+            {text: "the skin of a website", correct: false}
+        ]
+    },
+
+    {
+        question: 'What does the <script> tag do?',
+        answer: [
+            {text: "It doesn't do anything", correct: false},
+            {text: "Links a javascript file in", correct: true},
+            {text: "Used to create a list", correct: false},
+            {text: "Nothing", correct: false}
+        ]
+    },
+
+    {
+        question: 'What does it mean for a webite to be responsive?',
+        answer: [
+            {text: "The text is read out when clicked", correct: false},
+            {text: "Things move when clicked", correct: false},
+            {text: "Text and images fit to scale of the screen", correct: true},
+            {text: "Users are asked to sign in/up first", correct: false}
+        ]
+    },
+
+    {
+        question: 'What is local storage called?',
+        answer: [
+            {text: "KSON", correct: false},
+            {text: "GSON", correct: false},
+            {text: "MSON", correct: false},
+            {text: "JSON", correct: true}
+        ]
+    },
 
 ]
 
