@@ -8,4 +8,8 @@
 
 #When a user clicks a wrong answer 5 seconds is taken off the timer
 
-#When the correct answer is clicked 
+#When the correct answer is clicked the user is moved onto the next question
+
+#At the end of the questions or when the timer runs out the user is prompted to enter their intials for their score
+
+#Scores are then shown in a list
