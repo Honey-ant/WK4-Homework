@@ -10,69 +10,81 @@
     <link rel="stylesheet" href="./style.css">
     <title>Quiz</title>
 </head>
-<body>
-    <p class="title">
-    Coding Quiz
-    </p>
-    <br>
+<body >
+    <div class="App-header">
+        <h1 class="title">
+        Bunuba Quiz
+        </h1>
+        <br>
+        
+        <section class="center">
+        <div id="container" class="justify-center center container"> 
     
-    <section class="center">
-    <div id="container" class="justify-center center container"> 
- 
-        <div id="question-container" class="hide">
-        <div id="question">Question</div>
-        <div id="answer-buttons" class="">
-             <button id="btn" class="btn" data-number="1" onclick="checkAnswer"></button>
-            <button id="btn" class="btn" data-number="2" onclick="checkAnswer"></button>
-            <button id="btn" class="btn" data-number="3" data-number="1" onclick="checkAnswer"></button>
-            <button id="btn" class="btn" data-number="4" onclick= "checkAnswer"></button> 
-        </div>
+            <div id="question-container" class="hide">
+            <div class="my-2 text-center" id="question">Question</div>
+            <div id="answer-buttons" class="my-3">
+                <button id="btn" class="btn" data-number="1" onclick="checkAnswer"></button>
+                <button id="btn" class="btn" data-number="2" onclick="checkAnswer"></button>
+                <button id="btn" class="btn" data-number="3" onclick="checkAnswer"></button>
+                <button id="btn" class="btn" data-number="4" onclick= "checkAnswer"></button> 
+            </div>
+
+            </div>
+
+            <div id="controls">
+            <button id="Start" class="btn" >Start</button>
+            <!-- <button id="next" class="next-btn btn hide" >Next</button> -->
+            </div>
 
         </div>
-        <div id="controls">
-        <button id="Start" class="btn" >Start</button>
-        <!-- <button id="next" class="next-btn btn hide" >Next</button> -->
+
+        <div class="card timer hide" id="time">
+            <div class="timer-text">
+                <div class="large-font timer-count text-center">60</div>
+                <h4>Seconds remaining</h4>
+                <h4>Score: <span class="score">0</span> </h4>
+            </div>
         </div>
-         <!-- <div id="container" class="hide">
-             <h2><span class="win">0</span></h2>
-         </div> -->
-    </div>
 
-    <div class="card timer hide" id="time">
-        <div class="timer-text">
-            <div class="large-font timer-count text-center">60</div>
-            <h4>Seconds remaining</h4>
-            <h4>Score: <span class="score">0</span> </h4>
+        <div class="submit-form  hide" id="container">
+
+            <div>
+                <h3 class="top">Enter highscore</h3>
+            </div>
+            <div class="row">
+                <form class="col py-2 my-2" id="score-form">
+                    <label>Initials:</label>
+                    <input id="name-input" class="px-1" type="text" placeholder="Enter initials here">
+                    <input id="submit" class="px-1" type="submit" value="submit">
+                </form>
+
+            </div>
         </div>
-    </div>
 
-    <div class="submit-form flex-column hide" id="container">
+        <div class="hide container justify-center center " id="highScores">
+                 <div >
+                   <h1  class="text-center" >Highscores</h1>   
+                </div>
+            <div class="highscore-container " id="container">
 
-        <div>
-            <h3 class="top">Enter highscore</h3>
+              
+                <div class="highscore">
+                    <ul id="score-list"> </ul>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <form class="col" id="score-form">
-                <label>Initials:</label>
-                <input id="name-input" type="text" placeholder="Enter initials here">
-                <input id="submit" type="submit" value="submit">
-            </form>
 
-        </div>
-    </div>
 
-    <div class="hide" id="highScores">
-    <div class="highscore-container" id="container">
-        <div class="highscore">
-            <ul id="score-list"> </ul>
-        </div>
-    </div>
-    </div>
-
+   </div> 
 
 </body>
+       <footer class="text-center justify-center ">
+        <P>This quiz was created on the stolen land
+             of the Boon Wurrung people of the Kulin Nation,
+              who's sovereignty has not been seeded
+            </P>
+    </footer>
 
-<footer><P>This quiz was created on the stolen land of the Boon Wurrung people of the Kulin Nation, who's sovereignty has not been seeded</P></footer>
 <script src="./script.js" defer></script>
 <script src="./scoreSave.js" defer></script>
 </html>

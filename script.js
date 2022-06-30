@@ -24,10 +24,6 @@ let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener("click", startGame)
 
-// function initForm() {
-    // getCorrect();
-// }
-
 function startGame() {
     console.log("started")
     startButton.classList.add("hide")
@@ -47,47 +43,13 @@ function winGame() {
 
 }
 
-//These functions are beig used by init
-// function getCorrect() {
-//     console.log("Correct!")
-//     //Get stored value from clientstorage, if it exists
-//     var storedCorrect = localStorage.getItem("scoreCount");
-//     if (storedCorrect === null) {
-//         scoreCounter = 0;
-//     } else {
-//         scoreCounter = storedCorrect;
-//     }
-//     scoreText.correctAnswer = scoreCounter;
-//     scoreCounter++
-// }
-
-//  startButton.addEventListener("click", function (event) {
-//      var element = event.target;
-
-//      if (element.matches(".correct")) {
-//          var state = element.getAttribute("class");
-//              if (state === "correct") {
-//                  setNextQuestion()
-//              } 
-         
-//      }
-//  })
-
 function setNextQuestion() {
     resetState()
  showQuestion(shuffledQuestions [currentQuestionIndex])
-//  if (currentQuestionIndex.length === 0 || questionCounter > max_questions){
-//      localStorage.setItem('mostRecentScore', scoreCounter)
-
-//      return window.location.localStorage
-//  }
-
-//  questionCounter++
  shuffledQuestions = questions.sort(() => Math.random() - .5)
  currentQuestionIndex = 0 
 
 } 
-
 
 function showQuestion(question){
     questionElement.innerText = question.question
@@ -96,16 +58,6 @@ function showQuestion(question){
         button.innerText = answer.text
         button.classList.add('btn');
         button.value = answer.correct;
-        // adds a class of 'correct' to the correct answer buttons
-        // if (answer.correct == true ) {
-        //     console.log('answer is correct')
-        //    button.dataset.correct = answer.correct
-        //   button.classList.add('correct')
-        // } else {
-        //     console.log('answer is wrong')
-        //     button.dataset.false = answer.false
-        //     button.classList.add('incorrect')
-        // }
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     }); 
@@ -186,7 +138,7 @@ function clearStatusClass(element) {
 function quizFin() {
     console.log("Quiz finished")
     questioncontainerElement.classList.add("hide")
-    container.textContent = "Quiz Fin";
+    container.textContent = "Quiz Finished!";
     submitForm.classList.remove("hide")
     timeCard.classList.add("hide")
     //initForm()
@@ -204,104 +156,73 @@ function startTimer() {
     }, 1000);
 }
 
-// var scoreForm = document.getElementById("score-form");
-// var scoreList = document.getElementById("score-list");
-
-// function handleScoreSubmit(event) {
-//   highScores.classList.remove('hide')    
-//     event.preventDefault();
-  
-//     var scoreName = $('input[name="score-input"]').val();
-
-//     if (!scoreName) {
-//         console.log('No name filled out in form!');
-//         return;
-//     }
-
-//     var scoreList = $(
-//         //the listed item element will be added
-//         '<li class>'
-//     );
-//     scoreList.text(scoreName);
-//     // print to page
-//     scoreList.append(scoreList);
-
-//     $('input[name="score-input"]').val('');
-// }
-
-// scoreForm.on('submit', handleScoreSubmit);
-
-// function initForm() {
-//     getCorrect()
-
-// }
 
 const questions = [
     {
-        question: 'What does HTML mean?',
+        question: 'What is the Bunuba word for barramundi?',
         answer: [
-            {text: 'Hyperlink text Manual Language', correct: false},
-            {text: 'Hypertext Markup Language', correct: true},
-            {text: 'HyperTone Mail Link', correct: false},
-            {text: 'HypnoText Mega Lanuage', correct:false}
+            {text: 'Barramundi', correct: false},
+            {text: 'Balga', correct: true},
+            {text: 'gawiy', correct: false},
+            {text: 'bambarri', correct:false}
         ]
     },
     {
-        question:'What does CSS stand for?',
+        question:'What is the Bunuba word for ears?',
         answer: [
-            {text: "Casandra Sylvia Stoks", correct: false},
-            {text: "Cambridge Sailing Society", correct: false},
-            {text: "Cascading Styling Sheet", correct: true},
-            {text: "Tasm", correct: false}
+            {text: "Bundi", correct: false},
+            {text: "Garri", correct: false},
+            {text: "Bina", correct: true},
+            {text: "Gumani", correct: false}
         ]
     },
     {
-        question:'What is the <link> tag used for in HTML?',
+        question:'What is the Bunuba word for man?',
         answer: [
-            {text: "Links in other websites", correct: false},
-            {text: "Linking to an external style sheet", correct: true},
-            {text: "Linking to an external Javascript file", correct: false},
-            {text: "Nothing", correct: false}
+            {text: "Wiyi", correct: false},
+            {text: "Gurama", correct: true},
+            {text: "Wura", correct: false},
+            {text: "There isn't one", correct: false}
+        ]
+    }, 
+
+    {
+        question: 'What is the Bunuba word for water',
+        answer: [
+            {text: "Galwanyi", correct: false},
+            {text: "Gawarra", correct: false},
+            {text: "Garuwa", correct: true},
+            {text: "Gayi", correct: false}
         ]
     },
 
     {
-        question: '_____ is the process of finding errors and fixing them?',
+        question: 'How many Mawi (clans) speak the Bunuba language?',
         answer: [
-            {text: "Scanning", correct: false},
-            {text: "Compliling", correct: false},
-            {text: "Debugging", correct: true},
-            {text: "Cleaning", correct: false}
+            {text: "9", correct: false},
+            {text: "13", correct: false},
+            {text: "10", correct: false},
+            {text: "12", correct: true}
         ]
     },
 
     {
-        question: 'Why was github created?',
+        question: 'what is mayi?',
         answer: [
-            {text: "The only way to safely share CSS", correct: false},
-            {text: "The only way to build databases", correct: false},
-            {text: "The only way to safely share html", correct: false},
-            {text: "The only way to safely share javascript", correct: true}
+            {text: "Food", correct: true},
+            {text: "Tree", correct: false},
+            {text: "Goanna", correct: false},
+            {text: "Sun", correct: false}
         ]
     },
 
     {
-        question: 'HTML can be described as _____',
+        question: 'jarramba is?',
         answer: [
-            {text: "the skeleton of a website", correct: true},
-            {text: "the muscle of a website", correct: false},
-            {text: "the fat of a website", correct: false},
-            {text: "the skin of a website", correct: false}
-        ]
-    },
-
-    {
-        question: 'What does the <script> tag do?',
-        answer: [
-            {text: "It doesn't do anything", correct: false},
-            {text: "Links a javascript file in", correct: true},
-            {text: "Used to create a list", correct: false},
-            {text: "Nothing", correct: false}
+            {text: "Sawfish", correct: false},
+            {text: "Cherabin", correct: true},
+            {text: "freshwater crocodile", correct: false},
+            {text: "black swan", correct: false}
         ]
     },
 

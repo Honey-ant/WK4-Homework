@@ -7,6 +7,7 @@ var highScores = document.getElementById("highScores");
 submitButton.addEventListener("click", function (event) {
    container.classList.add("hide")
     submitForm.classList.add("hide")
+    highScores.classList.remove("hide")	
     var scores = JSON.parse(window.localStorage.getItem("scoreList")) || [];
     console.log("clicked");
     event.preventDefault();
@@ -37,7 +38,9 @@ function renderScores(x) {
         var olEl = document.getElementById("score-list");
         olEl.appendChild(liTag);
     })
-    
+     
+
+    // startButton.classList.remove('hide')
 }
 
 // scoreForm.onclick('submit', handleScoreSubmit);
