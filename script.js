@@ -227,22 +227,22 @@ const questions = [
     },
 
     {
-        question: 'What does it mean for a webite to be responsive?',
+        question: 'What is the Bunuba word for woman?',
         answer: [
-            {text: "The text is read out when clicked", correct: false},
-            {text: "Things move when clicked", correct: false},
-            {text: "Text and images fit to scale of the screen", correct: true},
-            {text: "Users are asked to sign in/up first", correct: false}
+            {text: "Wura", correct: false},
+            {text: "Gilinyiman", correct: false},
+            {text: "Wiyi", correct: true},
+            {text: "Gurama", correct: false}
         ]
     },
 
     {
-        question: 'What is local storage called?',
+        question: 'What is the blacksoil plains in Bunuba?',
         answer: [
-            {text: "KSON", correct: false},
-            {text: "GSON", correct: false},
-            {text: "MSON", correct: false},
-            {text: "JSON", correct: true}
+            {text: "Ganimbiri", correct: false},
+            {text: "Gunyuja", correct: false},
+            {text: "Thalalngi", correct: false},
+            {text: "Galanganyja", correct: true}
         ]
     },
 
